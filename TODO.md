@@ -1,7 +1,7 @@
 # TODO
 
-* [ ] Set up README
-* [ ] Set up gitignore
+* [*] Set up README
+* [*] Set up gitignore
 * [ ] Set up individual scenes and components
     * [ ] Global components
     * [ ] Scenes
