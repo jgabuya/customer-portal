@@ -14,3 +14,4 @@
     * [ ] Use Redux for state management
 * [ ] Set up Node.js backend
 * [ ] Ensure 100% test coverage 
+* [ ] Licensing (optional)
