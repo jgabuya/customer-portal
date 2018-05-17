@@ -3,10 +3,11 @@
 ## Description
 
 This is a simple customer portal web app that allows the user (customer) to:
-    * View profile
-    * View accounts
-        * balances
-        * transactions
+
+* View profile
+* View accounts
+    * balances
+    * transactions
         
 ## Structure
 
