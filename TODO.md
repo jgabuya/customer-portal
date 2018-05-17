@@ -11,5 +11,6 @@
     * [ ] Routing
 * [ ] Set up app components to work with mock data
     * [ ] API Endpoints
+    * [ ] Use Redux for state management
 * [ ] Set up Node.js backend
 * [ ] Ensure 100% test coverage 
