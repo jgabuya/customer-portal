@@ -14,44 +14,54 @@ import Transactions from "./scenes/Transactions";
 class App extends Component {
     render() {
         return (
-            <Router>
-                <div>
-                    {/* Set header metadata */}
-                    <Helmet defaultTitle="Home"
-                            titleTemplate="%s - Customer Portal">
-                        <title>Home</title>
-                    </Helmet>
+            <div>
+                {/* Set header metadata */}
+                <Helmet defaultTitle="Home"
+                        titleTemplate="%s - Customer Portal">
+                    <title>Home</title>
+                </Helmet>
 
-                    {/*
-                    Define routes using react-router. Throughout the whole app, we are using Dynamic instead of
-                    Static Routing, aka "routing that takes place as your app is rendering, not in a
-                    configuration or convention outside of a running app". Head over to the following link for more
-                    info: https://reacttraining.com/react-router/web/guides/philosophy
-                */}
-                    <Switch>
+                <Router>
+                    <MainNav />
+
+                    <main role="main" className="container">
                         {/*
-                        Taken from react-router docs:
-                        The Route component is perhaps the most important component in React Router to
-                        understand and learn to use well. Its most basic responsibility is to render some
-                        UI when a location matches the route’s path.
-                        https://reacttraining.com/react-router/web/api/Route
-                    */}
-                        <Route exact path="/" component={Dashboard} />
-                        <Route path="/profile" component={Profile} />
-                        <Route path="/transactions" component={Transactions} />
-                        <Route path="/login" component={Login} />
+                            Define routes using react-router. Throughout the whole app, we are using Dynamic instead of
+                            Static Routing, aka "routing that takes place as your app is rendering, not in a
+                            configuration or convention outside of a running app". Head over to the following link for more
+                            info: https://reacttraining.com/react-router/web/guides/philosophy
+                        */}
 
-                        {/* 404 route, default if none of the above route/crumbroutes are satisfied */}
-                        <Route path="/404" component={ NotFound } />
-                        <Redirect to="/404" />
-                    </Switch>
+                        <Switch>
+                            {/*
+                                Taken from react-router docs:
+                                The Route component is perhaps the most important component in React Router to
+                                understand and learn to use well. Its most basic responsibility is to render some
+                                UI when a location matches the route’s path.
+                                https://reacttraining.com/react-router/web/api/Route
+                            */}
+                            <Route exact path="/" component={Dashboard}/>
+                            <Route path="/profile" component={Profile}/>
+                            <Route path="/transactions" component={Transactions}/>
+                            <Route path="/login" component={Login}/>
 
-                    <Link to="/">Dashboard</Link>
-                    <Link to="/profile">Profile</Link>
-                    <Link to="/transactions">Transactions</Link>
-                    <Link to="/login">Login</Link>
-                </div>
-            </Router>
+                            {/* 404 route, default if none of the above route/crumbroutes are satisfied */}
+                            <Route path="/404" component={NotFound}/>
+                            <Redirect to="/404"/>
+                        </Switch>
+
+                        <footer>
+                            <hr/>
+
+                            <div className="row">
+                                <div className="col-md-12">
+                                    &copy; {new Date().getFullYear()} EQX
+                                </div>
+                            </div>
+                        </footer>
+                    </main>
+                </Router>
+            </div>
         );
     }
 }
