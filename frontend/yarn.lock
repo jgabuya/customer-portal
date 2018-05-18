@@ -1441,7 +1441,7 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@^2.2.3:
+classnames@^2.2.3, classnames@^2.2.5:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
 
@@ -5712,7 +5712,15 @@ react-side-effect@^1.1.0:
     exenv "^1.2.1"
     shallowequal "^1.0.1"
 
-react-transition-group@^2.3.1:
+react-toastify@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/react-toastify/-/react-toastify-4.0.1.tgz#fb6fe9da9271852eb9f45e1edb88a55d68964552"
+  dependencies:
+    classnames "^2.2.5"
+    prop-types "^15.6.0"
+    react-transition-group "^2.2.1"
+
+react-transition-group@^2.2.1, react-transition-group@^2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-2.3.1.tgz#31d611b33e143a5e0f2d94c348e026a0f3b474b6"
   dependencies:
