@@ -8,12 +8,13 @@ import 'font-awesome/css/font-awesome.min.css';
 import './App.css';
 
 import MainNav from './components/MainNav';
+import Footer from './components/Footer';
 
 import Login from './scenes/Login';
 import Dashboard from './scenes/Dashboard';
 import Profile from './scenes/Profile';
-import NotFound from "./scenes/NotFound";
-import Transactions from "./scenes/Transactions";
+import NotFound from './scenes/NotFound';
+import Transactions from './scenes/Transactions';
 
 class App extends Component {
     render() {
@@ -54,15 +55,7 @@ class App extends Component {
                             <Redirect to="/404"/>
                         </Switch>
 
-                        <footer>
-                            <hr/>
-
-                            <div className="row">
-                                <div className="col-md-12">
-                                    &copy; {new Date().getFullYear()} Customer Portal
-                                </div>
-                            </div>
-                        </footer>
+                        <Footer/>
                     </main>
                 </Router>
             </div>
