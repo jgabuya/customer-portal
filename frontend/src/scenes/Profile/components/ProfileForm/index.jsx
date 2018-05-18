@@ -18,7 +18,7 @@ class ProfileForm extends Component {
                     <Label for="email" md={3}>Email Address</Label>
 
                     <Col sm={9}>
-                        <Input type="email" name="email" id="email" value={this.props.email} required placeholder="Email Address" />
+                        <Input type="email" name="email" id="email" defaultValue={this.props.email} required placeholder="Email Address" />
                     </Col>
                 </FormGroup>
 
@@ -26,7 +26,7 @@ class ProfileForm extends Component {
                     <Label for="firstName" md={3}>First Name</Label>
 
                     <Col sm={9}>
-                        <Input type="text" name="firstName" id="firstName" value={this.props.firstName} required placeholder="First Name" />
+                        <Input type="text" name="firstName" id="firstName" defaultValue={this.props.firstName} required placeholder="First Name" />
                     </Col>
                 </FormGroup>
 
@@ -34,7 +34,7 @@ class ProfileForm extends Component {
                     <Label for="lastName" md={3}>Last Name</Label>
 
                     <Col sm={9}>
-                        <Input type="text" name="lastName" id="lastName" value={this.props.lastName} required placeholder="Last Name" />
+                        <Input type="text" name="lastName" id="lastName" defaultValue={this.props.lastName} required placeholder="Last Name" />
                     </Col>
                 </FormGroup>
 
@@ -42,7 +42,7 @@ class ProfileForm extends Component {
                     <Label for="phone" md={3}>Phone Number</Label>
 
                     <Col sm={9}>
-                        <Input type="text" name="phone" id="phone" value={this.props.phone} required placeholder="Phone Number" />
+                        <Input type="text" name="phone" id="phone" defaultValue={this.props.phone} required placeholder="Phone Number" />
                     </Col>
                 </FormGroup>
 
@@ -50,7 +50,7 @@ class ProfileForm extends Component {
                     <Label for="address" md={3}>Address</Label>
 
                     <Col sm={9}>
-                        <Input type="textarea" name="address" id="address" value={this.props.address} required placeholder="Address" />
+                        <Input type="textarea" name="address" id="address" defaultValue={this.props.address} required placeholder="Address" />
                         <FormText>
                             For the sake of brevity, this field will also accept City, Province/State, and Country for now
                         </FormText>
