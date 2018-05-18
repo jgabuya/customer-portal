@@ -1,6 +1,6 @@
-import React, {Component} from "react";
-import {BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom";
-import {Helmet} from "react-helmet";
+import React, {Component} from 'react';
+import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom';
+import {Helmet} from 'react-helmet';
 
 // load global css first before loading components that have their own css references
 import 'bootstrap/dist/css/bootstrap.min.css';
