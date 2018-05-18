@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Col, Row} from 'reactstrap';
+import {toast} from 'react-toastify';
 
 import ProfileForm from './components/ProfileForm';
 
@@ -36,6 +37,8 @@ class Profile extends Component {
         const data = new FormData(e.target);
 
         console.log(data.get('email'));
+
+        toast.success('Profile updated.')
     }
 
     render() {

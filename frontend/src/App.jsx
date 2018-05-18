@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom';
 import {Helmet} from 'react-helmet';
+import {ToastContainer} from 'react-toastify';
 
 // load global css first before loading components that have their own css references
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
+import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 
 import MainNav from './components/MainNav';
@@ -58,6 +60,9 @@ class App extends Component {
                         <Footer/>
                     </main>
                 </Router>
+
+                {/* Toast container */}
+                <ToastContainer />
             </div>
         );
     }
