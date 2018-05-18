@@ -2,7 +2,7 @@
 
 A progressive web app (pwa) frontend for the customer portal web app.
 
-## Installing / Getting started
+## How to start
 
 Just run the following commands on this project's root directory:
 
@@ -10,8 +10,15 @@ Just run the following commands on this project's root directory:
  yarn
  yarn start
  ```
+ 
+ or
+ 
+ ```shell
+ npm install
+ npm start
+ ```
 
- You may also use plain old `npm` but `yarn` will be used throughout this document.
+ Note: Either `npm` or `yarn` works but `yarn` will be used throughout this document.
 
  Once the app is running, you can view it in your browser: `http://localhost:3000/`
 
@@ -54,11 +61,9 @@ Run `yarn build` on this repo's root directory.
 
 More info [here](https://github.com/facebookincubator/create-react-app#npm-run-build-or-yarn-build).
 
-### Deploying / Publishing (TODO)
-
 ## Routes
 
-We implement a declarative routing style using [react-router](https://github.com/ReactTraining/react-router). Instead of _Static Routing_ where routes are declared in a config file before rendering takes place, `react-router` implements _Dynamic Routing_ which takes place as the app is rendering, not in a configuration or convention outside of the running app. 
+This app implements a declarative routing style using [react-router](https://github.com/ReactTraining/react-router). Instead of _Static Routing_ where routes are declared in a config file before rendering takes place, `react-router` implements _Dynamic Routing_ which takes place as the app is rendering, not in a configuration or convention outside of the running app. 
 
 More info [here](https://reacttraining.com/react-router/core/guides/philosophy)
 
@@ -68,11 +73,7 @@ More info [here](https://reacttraining.com/react-router/core/guides/philosophy)
 * **Sign in** `/sign-in`
 * **Sign out** `/sign-out`   
 
-## Versioning (TODO)
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [link to tags on this repository](/tags).
-
-## Tests (TODO)
+## Tests
 
 Run `yarn test` from this repo's root directory.
 
