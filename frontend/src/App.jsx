@@ -52,7 +52,7 @@ class App extends Component {
                             <Route path="/profile" component={Profile}/>
                             <Route path="/transactions" component={Transactions}/>
 
-                            {/* 404 route, default if none of the above route/crumbroutes are satisfied */}
+                            {/* 404 route, default if none of the above routes are satisfied */}
                             <Route path="/404" component={NotFound}/>
                             <Redirect to="/404"/>
                         </Switch>
