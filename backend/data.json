@@ -1,0 +1,140 @@
+{
+  "users": [
+    {
+      "id": "2378364a-20e9-48b5-9f76-bb39eafac152",
+      "email": "MelanieKonig@rhyta.com",
+      "firstName": "Melanie",
+      "lastName": "Konig",
+      "phone": "703-396-2520",
+      "address": "2540 Golf Course Drive Manassas, VA 22110 Germany"
+    }
+  ],
+  "accounts": [
+    {
+      "id": "b5a86c78-b52b-4d0a-ac7a-f504242b6a2a",
+      "name": "Personal Savings",
+      "balance": 1000000,
+      "currency": "USD",
+      "transactions": {
+        "deposit": [
+          {
+            "id": "20b29299-33ff-4d4d-aa62-73f84f320834",
+            "amount": 3453,
+            "timestamp": 1526716070
+          },
+          {
+            "id": "57a0a58f-be6c-414f-8c2b-0f61ad4e92fb",
+            "amount": 199,
+            "timestamp": 1526802470
+          },
+          {
+            "id": "29a350bb-a448-4d7b-9abd-2cb17bd84baa",
+            "amount": 855,
+            "timestamp": 1527320870
+          }
+        ],
+        "withdrawal": [
+          {
+            "id": "309c11c5-e571-44d8-8e25-08fafc70674e",
+            "amount": 200,
+            "timestamp": 1518511670
+          },
+          {
+            "id": "ebfdd4d0-0a7c-4b49-9caa-101f565ffbfa",
+            "amount": 100,
+            "timestamp": 1518594470
+          },
+          {
+            "id": "7ce91ed3-f600-4bc4-9bc6-1181463fbbbf",
+            "amount": 6000,
+            "timestamp": 1519112870
+          }
+        ]
+      }
+    },
+    {
+      "id": "e93eb3f2-5fd4-4e73-a02a-be8bcfad06d0",
+      "name": "Business Fund",
+      "balance": 998877,
+      "currency": "EUR",
+      "transactions": {
+        "deposit": [
+          {
+            "id": "66f8f9a6-334b-403a-afa2-ff9d4ca73225",
+            "amount": 233,
+            "timestamp": 1500623270
+          },
+          {
+            "id": "0500caa4-f3fb-4c0f-b251-256a8e07cafb",
+            "amount": 12,
+            "timestamp": 1500626870
+          },
+          {
+            "id": "f47deef5-ae82-4318-97a7-53718b8420ed",
+            "amount": 9000,
+            "timestamp": 1500709670
+          },
+          {
+            "id": "7fa03029-0ac1-45ff-bad1-57c5dc20e135",
+            "amount": 8755,
+            "timestamp": 1501228070
+          }
+        ],
+        "withdrawal": [
+          {
+            "id": "45a035c8-591d-4659-b9ab-c4abe914fdcf",
+            "amount": 34,
+            "timestamp": 1500367670
+          },
+          {
+            "id": "e74c05d2-5714-4e5e-a7ba-ce5b9fe9c2fd",
+            "amount": 988,
+            "timestamp": 1500450470
+          }
+        ]
+      }
+    },
+    {
+      "id": "574579fc-c43d-4d7e-8fba-e84060a8e0f3",
+      "name": "Emergency Fund",
+      "balance": 855021,
+      "currency": "EUR",
+      "transactions": {
+        "deposit": [
+          {
+            "id": "4cc87c61-dad7-4267-b8d3-c1d8057af4dc",
+            "amount": 4566,
+            "timestamp": 1506066470
+          },
+          {
+            "id": "f51d75d8-0fc2-4842-bb23-c90e7523c308",
+            "amount": 654,
+            "timestamp": 1506070070
+          }
+        ],
+        "withdrawal": [
+          {
+            "id": "126aa85e-d3e9-4455-8c07-0890fec6a4a3",
+            "amount": 266,
+            "timestamp": 1506152870
+          },
+          {
+            "id": "3847ee5a-5af0-46e0-a632-cd62ce82308b",
+            "amount": 2222,
+            "timestamp": 1506671270
+          },
+          {
+            "id": "89fbad33-3063-4232-90ac-309e35a7ffee",
+            "amount": 7896,
+            "timestamp": 1508658470
+          },
+          {
+            "id": "27b9afbe-2c41-4510-a779-141c76efad7c",
+            "amount": 8907,
+            "timestamp": 1537602470
+          }
+        ]
+      }
+    }
+  ]
+}
