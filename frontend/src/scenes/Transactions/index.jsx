@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Col, Row} from 'reactstrap';
-import AccountSelectorForm from "./components/AccountSelectorForm";
-import TransactionsDisplay from "./components/TransactionsDisplay";
+import AccountSelectorForm from './components/AccountSelectorForm';
+import TransactionsDisplay from './components/TransactionsDisplay';
 
 class Transactions extends Component {
     constructor(props) {
