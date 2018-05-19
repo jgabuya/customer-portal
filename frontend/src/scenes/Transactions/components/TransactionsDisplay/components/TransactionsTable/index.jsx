@@ -3,10 +3,6 @@ import PropTypes from 'prop-types';
 import {Table} from 'reactstrap';
 
 class TransactionsTable extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     renderItems() {
         return this.props.transactions.map((item, index) => {
             return (
