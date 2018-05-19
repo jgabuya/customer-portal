@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Col, Row} from 'reactstrap';
+import {toast} from 'react-toastify';
 import AccountSelectorForm from './components/AccountSelectorForm';
 import TransactionsDisplay from './components/TransactionsDisplay';
 import axios from 'axios';
@@ -19,22 +20,26 @@ class Transactions extends Component {
     }
 
     async componentDidMount() {
-        const user = await axios.get(config.apiRoot + '/users');
-        const accounts = await axios.get(config.apiRoot + '/accounts');
+        try {
+            const user = await axios.get(config.apiRoot + '/users');
 
-        // set state
-        if (user.status === 200) {
             this.setState({
                 user: user.data
             });
+        } catch(err) {
+            toast.error(err.toString());
         }
 
-        if (accounts.status === 200) {
+        try {
+            const accounts = await axios.get(config.apiRoot + '/accounts');
+
             this.setState({
                 accounts: accounts.data
             });
 
             this.onHandleAccountChange(0);
+        } catch(err) {
+            toast.error(err.toString());
         }
     }
 

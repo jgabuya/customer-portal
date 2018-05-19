@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Button, Col, Row, Table} from 'reactstrap';
 import {Helmet} from 'react-helmet';
+import {toast} from 'react-toastify';
 import axios from 'axios';
 import config from '../../config';
 
@@ -16,20 +17,24 @@ class Dashboard extends Component {
     }
 
     async componentDidMount() {
-        const user = await axios.get(config.apiRoot + '/users');
-        const accounts = await axios.get(config.apiRoot + '/accounts');
+        try {
+            const user = await axios.get(config.apiRoot + '/users');
 
-        // set state
-        if (user.status === 200) {
             this.setState({
                 user: user.data
             });
+        } catch(err) {
+            toast.error(err.toString());
         }
 
-        if (accounts.status === 200) {
+        try {
+            const accounts = await axios.get(config.apiRoot + '/accounts');
+
             this.setState({
                 accounts: accounts.data
             });
+        } catch(err) {
+            toast.error(err.toString());
         }
     }
 
