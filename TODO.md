@@ -9,10 +9,8 @@
          * [x] Profile
          * [x] Transactions
      * [x] Routing
- * [ ] Set up app components to work with mock data
-     * [x] API Endpoints
-     * [ ] Use Redux for state management
+ * [x] Set up app components to work with mock data
+     * [x] API Endpoints     
  * [x] Set up Node.js backend
- * [ ] Define backend routes (backend readme) 
- * [ ] Ensure 100% test coverage 
- * [ ] Licensing (optional)
+ * [x] Define backend routes (backend readme) 
+ * [x] Ensure 100% test coverage 

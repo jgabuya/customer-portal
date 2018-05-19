@@ -34,18 +34,18 @@ class MainNav extends Component {
             <div>
                 <Navbar color="dark" dark fixed="top" expand="md">
                     <div className="container">
-                        <NavbarBrand href="/">Customer Portal</NavbarBrand>
+                        <NavbarBrand href="/p/dashboard">Customer Portal</NavbarBrand>
                         <NavbarToggler onClick={this.toggle} />
 
                         <Collapse isOpen={this.state.isOpen} navbar>
                             {/* left menu */}
                             <Nav navbar>
                                 <NavItem>
-                                    <NavLink href="/dashboard">Dashboard</NavLink>
+                                    <NavLink href="/p/dashboard">Dashboard</NavLink>
                                 </NavItem>
 
                                 <NavItem>
-                                    <NavLink href="/transactions">Transactions</NavLink>
+                                    <NavLink href="/p/transactions">Transactions</NavLink>
                                 </NavItem>
                             </Nav>
 
@@ -57,7 +57,7 @@ class MainNav extends Component {
                                     </DropdownToggle>
 
                                     <DropdownMenu>
-                                        <DropdownItem href="/profile">Profile</DropdownItem>
+                                        <DropdownItem href="/p/profile">Profile</DropdownItem>
                                         <DropdownItem divider />
                                         <DropdownItem href="/">Sign Out</DropdownItem>
                                     </DropdownMenu>

@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {Col, Row} from 'reactstrap';
 import {toast} from 'react-toastify';
-import AccountSelectorForm from './components/AccountSelectorForm';
-import TransactionsDisplay from './components/TransactionsDisplay';
+import AccountSelectorForm from './components/AccountSelectorForm/index';
+import TransactionsDisplay from './components/TransactionsDisplay/index';
 import axios from 'axios';
-import config from '../../config';
+import config from '../../../../config';
 
 class Transactions extends Component {
     constructor(props) {
