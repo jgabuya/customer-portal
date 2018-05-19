@@ -47,10 +47,10 @@ class App extends Component {
                                 UI when a location matches the route’s path.
                                 https://reacttraining.com/react-router/web/api/Route
                             */}
-                            <Route exact path="/" component={Dashboard}/>
+                            <Route exact path="/" component={Login}/>
+                            <Route path="/dashboard" component={Dashboard}/>
                             <Route path="/profile" component={Profile}/>
                             <Route path="/transactions" component={Transactions}/>
-                            <Route path="/login" component={Login}/>
 
                             {/* 404 route, default if none of the above route/crumbroutes are satisfied */}
                             <Route path="/404" component={NotFound}/>
