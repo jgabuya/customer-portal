@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {Col, Row, Table} from 'reactstrap';
 import {Helmet} from 'react-helmet';
+import axios from 'axios';
+import config from '../../config';
 
 class Dashboard extends Component {
     constructor(props) {
@@ -8,22 +10,27 @@ class Dashboard extends Component {
 
         // initialize state
         this.state = {
+            user: {},
             accounts: []
-        }
+        };
     }
 
-    componentDidMount() {
-        // set accounts data
-        this.setState({
-            accounts: Array.from(Array(13).keys()).map((value, index, array) => {
-                return {
-                    id: 'ff2e0edc-5aac-11e8-9c2d-fa7ae01bbebc',
-                    name: `Account ${index}`,
-                    currency: 'EURO',
-                    balance: Math.round(Math.random() * 10000000)
-                }
-            })
-        });
+    async componentDidMount() {
+        const user = await axios.get(config.apiRoot + '/users');
+        const accounts = await axios.get(config.apiRoot + '/accounts');
+
+        // set state
+        if (user.status === 200) {
+            this.setState({
+                user: user.data
+            });
+        }
+
+        if (accounts.status === 200) {
+            this.setState({
+                accounts: accounts.data
+            });
+        }
     }
 
     renderAccounts() {
@@ -31,7 +38,7 @@ class Dashboard extends Component {
             return (
                 <tr key={index}>
                     <td>{item.name}</td>
-                    <td>{item.balance}</td>
+                    <td>{item.balance.toLocaleString()}</td>
                     <td>{item.currency}</td>
                 </tr>
             )
@@ -48,7 +55,7 @@ class Dashboard extends Component {
 
                 <Row>
                     <Col>
-                        <h2>Welcome, user!</h2>
+                        <h2>Welcome, {this.state.user.firstName} !</h2>
                     </Col>
                 </Row>
 
