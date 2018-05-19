@@ -3,10 +3,6 @@ import PropTypes from 'prop-types';
 import {Form, FormGroup, Input, Label} from 'reactstrap';
 
 class AccountSelectorForm extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     renderAccountsDropdown() {
         return this.props.accounts.map((item, index) => {
             return (
