@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {Col, Row} from 'reactstrap';
 import AccountSelectorForm from './components/AccountSelectorForm';
 import TransactionsDisplay from './components/TransactionsDisplay';
+import axios from 'axios';
+import config from '../../config';
 
 class Transactions extends Component {
     constructor(props) {
@@ -10,37 +12,35 @@ class Transactions extends Component {
         // initialize state
         this.state = {
             accounts: [],
-            transactions: {
-                deposit: [],
-                withdrawal: []
-            },
-            selectedAccountId: null
+            selectedAccountIndex: null
         };
 
         this.onHandleAccountChange = this.onHandleAccountChange.bind(this);
     }
 
-    componentDidMount() {
-        // set accounts data
-        this.setState({
-            accounts: Array.from(Array(13).keys()).map((value, index) => {
-                return {
-                    id: 'ff2e0edc-5aac-11e8-9c2d-fa7ae01bbebc',
-                    name: `Account ${index}`,
-                    currency: 'EURO',
-                    balance: Math.round(Math.random() * 10000000)
-                }
-            })
-        }, () => {
-            this.onHandleAccountChange(this.state.accounts[0].id);
+    async componentDidMount() {
+        const user = await axios.get(config.apiRoot + '/users');
+        const accounts = await axios.get(config.apiRoot + '/accounts');
 
-            // fetch transactions here
-        });
+        // set state
+        if (user.status === 200) {
+            this.setState({
+                user: user.data
+            });
+        }
+
+        if (accounts.status === 200) {
+            this.setState({
+                accounts: accounts.data
+            });
+
+            this.onHandleAccountChange(0);
+        }
     }
 
-    onHandleAccountChange(accountId) {
+    onHandleAccountChange(index) {
         this.setState({
-            selectedAccountId: accountId
+            selectedAccountIndex: index
         });
     }
 
@@ -62,7 +62,13 @@ class Transactions extends Component {
 
                 <Row className="mt-3">
                     <Col>
-                        <TransactionsDisplay transactions={this.state.transactions}/>
+                        {this.state.selectedAccountIndex !== null &&
+                            <div>
+                                <h5 className="mb-4">Showing transactions for <span className="text-muted">{this.state.accounts[this.state.selectedAccountIndex].name}</span></h5>
+
+                                <TransactionsDisplay transactions={this.state.accounts[this.state.selectedAccountIndex].transactions} currency={this.state.accounts[this.state.selectedAccountIndex].currency} />
+                            </div>
+                        }
                     </Col>
                 </Row>
             </div>
