@@ -10,7 +10,10 @@ class Transactions extends Component {
         // initialize state
         this.state = {
             accounts: [],
-            transactions: {},
+            transactions: {
+                deposit: [],
+                withdrawal: []
+            },
             selectedAccountId: null
         };
 
@@ -20,7 +23,7 @@ class Transactions extends Component {
     componentDidMount() {
         // set accounts data
         this.setState({
-            accounts: Array.from(Array(13).keys()).map((value, index, array) => {
+            accounts: Array.from(Array(13).keys()).map((value, index) => {
                 return {
                     id: 'ff2e0edc-5aac-11e8-9c2d-fa7ae01bbebc',
                     name: `Account ${index}`,
@@ -29,14 +32,16 @@ class Transactions extends Component {
                 }
             })
         }, () => {
-            this.setState({
-                selectedAccountId: this.state.accounts[0].id
-            })
+            this.onHandleAccountChange(this.state.accounts[0].id);
+
+            // fetch transactions here
         });
     }
 
     onHandleAccountChange(accountId) {
-        this.state.selectedAccountId = accountId;
+        this.setState({
+            selectedAccountId: accountId
+        });
     }
 
     render() {
