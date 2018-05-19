@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {Nav, NavItem, NavLink} from 'reactstrap';
+import {Nav, NavItem, NavLink, TabContent, TabPane} from 'reactstrap';
+import TransactionsTable from "./components/TransactionsTable";
 
 class TransactionsDisplay extends Component {
     constructor(props) {
@@ -40,6 +41,16 @@ class TransactionsDisplay extends Component {
                         </NavLink>
                     </NavItem>
                 </Nav>
+
+                <TabContent activeTab={this.state.activeTab} className="mt-4">
+                    <TabPane tabId="deposit">
+                        <TransactionsTable transactions={this.props.transactions.deposit}/>
+                    </TabPane>
+
+                    <TabPane tabId="withdrawal">
+                        <TransactionsTable transactions={this.props.transactions.withdrawal}/>
+                    </TabPane>
+                </TabContent>
             </div>
         )
     }
