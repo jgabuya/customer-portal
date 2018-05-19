@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Col, Row, Table} from 'reactstrap';
+import {Button, Col, Row, Table} from 'reactstrap';
 import {Helmet} from 'react-helmet';
 import axios from 'axios';
 import config from '../../config';
@@ -59,21 +59,27 @@ class Dashboard extends Component {
                     </Col>
                 </Row>
 
-                <Row className="mt-3">
+                <Row className="mt-4">
                     <Col>
-                        <h5 className="mb-4">Accounts</h5>
+                        <h5 className="mb-4 float-left">Accounts</h5>
 
+                        <Button color="outline-primary" href="/transactions" className="float-right">View transactions</Button>
+                    </Col>
+                </Row>
+
+                <Row className="mt-2">
+                    <Col>
                         <Table striped hover responsive>
                             <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Balance</th>
-                                    <th>Currency</th>
-                                </tr>
+                            <tr>
+                                <th>Name</th>
+                                <th>Balance</th>
+                                <th>Currency</th>
+                            </tr>
                             </thead>
 
                             <tbody>
-                                {this.renderAccounts()}
+                            {this.renderAccounts()}
                             </tbody>
                         </Table>
                     </Col>
