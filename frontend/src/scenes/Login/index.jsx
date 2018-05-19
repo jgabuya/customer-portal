@@ -8,8 +8,8 @@ class Login extends Component {
 
         // set initial state
         this.state = {
-            isAuthenticated: false
-        }
+            isAuthenticated: false // nothing to do with actual authentication, but used for redirection
+        };
 
         this.onHandleFormSubmit = this.onHandleFormSubmit.bind(this);
     }
@@ -26,13 +26,13 @@ class Login extends Component {
         return (
             <div>
                 {this.state.isAuthenticated === true ? (
-                    <Redirect to="/dashboard" />
+                    <Redirect to="/p/dashboard" />
                 ) : (
-                    <Row className="mb-5 mt-5">
+                    <Row className="mt-5">
                         <Col md={{size: 6, offset: 3}}>
                             <Card>
                                 <CardBody>
-                                    <CardTitle className="text-center">Please sign in</CardTitle>
+                                    <CardTitle className="text-center">Sign in to Customer Portal</CardTitle>
 
                                     <hr/>
 

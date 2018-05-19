@@ -3,7 +3,7 @@ import {Button, Col, Row, Table} from 'reactstrap';
 import {Helmet} from 'react-helmet';
 import {toast} from 'react-toastify';
 import axios from 'axios';
-import config from '../../config';
+import config from '../../../../config';
 
 class Dashboard extends Component {
     constructor(props) {
@@ -68,7 +68,7 @@ class Dashboard extends Component {
                     <Col>
                         <h5 className="mb-4 float-left">Accounts</h5>
 
-                        <Button color="outline-primary" href="/transactions" className="float-right">View transactions</Button>
+                        <Button color="outline-primary" href="/p/transactions" className="float-right">View transactions</Button>
                     </Col>
                 </Row>
 

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Nav, NavItem, NavLink, TabContent, TabPane} from 'reactstrap';
-import TransactionsTable from './components/TransactionsTable';
+import TransactionsTable from './components/TransactionsTable/index';
 
 class TransactionsDisplay extends Component {
     constructor(props) {

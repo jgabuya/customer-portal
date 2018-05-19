@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import {Col, Row} from 'reactstrap';
 import {toast} from 'react-toastify';
-import ProfileForm from './components/ProfileForm';
+import ProfileForm from './components/ProfileForm/index';
 import axios from 'axios';
-import config from '../../config';
+import config from '../../../../config';
 
 class Profile extends Component {
     constructor(props) {
