@@ -9,7 +9,7 @@
          * [x] Profile
          * [x] Transactions
      * [x] Routing
- * [] Set up app components to work with mock data
+ * [ ] Set up app components to work with mock data
      * [x] API Endpoints
      * [ ] Use Redux for state management
  * [x] Set up Node.js backend
