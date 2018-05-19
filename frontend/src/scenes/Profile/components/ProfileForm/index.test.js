@@ -6,7 +6,7 @@ it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(
         <ProfileForm
-            customerId="792c02b1-e230-4946-83bd-d4588095b501"
+            id="792c02b1-e230-4946-83bd-d4588095b501"
             email="sherlock@mail.com"
             firstName="Sherlock"
             lastName="Holmes"

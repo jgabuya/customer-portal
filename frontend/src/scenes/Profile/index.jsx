@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import {Col, Row} from 'reactstrap';
 import {toast} from 'react-toastify';
-
 import ProfileForm from './components/ProfileForm';
+import axios from 'axios';
+import config from '../../config';
 
 class Profile extends Component {
     constructor(props) {
@@ -10,7 +11,7 @@ class Profile extends Component {
 
         // initialize state
         this.state = {
-            customerId: '',
+            id: '',
             email: '',
             firstName: '',
             lastName: '',
@@ -21,24 +22,36 @@ class Profile extends Component {
         this.onHandleFormSubmit = this.onHandleFormSubmit.bind(this);
     }
 
-    componentDidMount() {
-        this.setState({
-            customerId: '792c02b1-e230-4946-83bd-d4588095b501',
-            email: 'sherlock@mail.com',
-            firstName: 'Sherlock',
-            lastName: 'Holmes',
-            phone: '223-222-2222',
-            address: '221B Baker Street, London, UK'
-        })
+    async componentDidMount() {
+        try {
+            const user = await axios.get(config.apiRoot + '/users');
+
+            this.setState({
+                ...user.data
+            });
+        } catch(err) {
+            toast.error(err.toString());
+        }
     }
 
-    onHandleFormSubmit(e) {
+    async onHandleFormSubmit(e) {
         e.preventDefault();
+
         const data = new FormData(e.target);
 
-        console.log(data.get('email'));
+        try {
+            const result = await axios.post(config.apiRoot + '/users', {
+                email: data.get('email'),
+                firstName: data.get('firstName'),
+                lastName: data.get('lastName'),
+                phone: data.get('phone'),
+                address: data.get('address')
+            });
 
-        toast.success('Profile updated.')
+            toast.success(result.data.message);
+        } catch(err) {
+            toast.error(err.response.data.message);
+        }
     }
 
     render() {
