@@ -66,7 +66,9 @@ class Profile extends Component {
 
                 <Row className="mt-3">
                     <Col md={{ size: 10, offset: 1 }}>
-                        <ProfileForm {...this.state} onHandleSubmit={this.onHandleFormSubmit} />
+                        {this.state.id.length > 0 &&
+                            <ProfileForm {...this.state} onHandleSubmit={this.onHandleFormSubmit} />
+                        }
                     </Col>
                 </Row>
             </div>

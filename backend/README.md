@@ -1,6 +1,6 @@
 # Customer Portal Backend
 
-## Running
+## Setting up / Running
 
 ```shell
 yarn
@@ -14,4 +14,17 @@ npm install
 npm start
 ``` 
 
-App can be accessed at `http://localhost:9000`
+Backend can be accessed at `http://localhost:9000`
+
+## API Endpoints
+
+* **Users** 
+    * `GET` `/users`
+    * `POST` `/users`
+* **Accounts** 
+    * `GET` `/accounts` 
+    
+## Additional notes
+
+Due to the nature of this app, backend authentication is not required at this time.
+
