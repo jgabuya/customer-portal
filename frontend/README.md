@@ -67,10 +67,10 @@ This app implements a declarative routing style using [react-router](https://git
 
 More info [here](https://reacttraining.com/react-router/core/guides/philosophy)
 
-* **Dashboard (Default)** `/`
+* **Sign in (Default)** `/`
+* **Dashboard** `/dashboard`
 * **Profile** `/profile`    
 * **Transactions** `/transactions`
-* **Sign in** `/sign-in`
 * **Sign out** `/sign-out`   
 
 ## Tests

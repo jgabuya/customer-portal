@@ -41,7 +41,7 @@ class MainNav extends Component {
                             {/* left menu */}
                             <Nav navbar>
                                 <NavItem>
-                                    <NavLink href="/">Dashboard</NavLink>
+                                    <NavLink href="/dashboard">Dashboard</NavLink>
                                 </NavItem>
 
                                 <NavItem>
