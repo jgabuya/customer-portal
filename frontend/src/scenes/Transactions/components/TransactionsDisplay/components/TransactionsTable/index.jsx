@@ -1,15 +1,16 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Table} from 'reactstrap';
+import moment from 'moment';
 
 class TransactionsTable extends Component {
     renderItems() {
         return this.props.transactions.map((item, index) => {
             return (
                 <tr key={index}>
-                    <td>{item.transactionId}</td>
-                    <td>{item.amount}</td>
-                    <td>{item.date}</td>
+                    <td>{item.id}</td>
+                    <td>{item.amount} {this.props.currency}</td>
+                    <td>{moment.unix(item.timestamp).format('MMMM Do YYYY, h:mm:ss a')}</td>
                 </tr>
             )
         });
@@ -35,7 +36,8 @@ class TransactionsTable extends Component {
 }
 
 TransactionsTable.propTypes = {
-    transactions: PropTypes.array.isRequired
+    transactions: PropTypes.array.isRequired,
+    currency: PropTypes.string.isRequired
 };
 
 export default TransactionsTable;
