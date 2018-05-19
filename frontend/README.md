@@ -4,7 +4,7 @@ A progressive web app (pwa) frontend for the customer portal web app.
 
 ## How to start
 
-Just run the following commands on this project's root directory:
+Within this directory, run the following commands:
 
  ```shell
  yarn
@@ -20,7 +20,7 @@ Just run the following commands on this project's root directory:
 
  Note: Either `npm` or `yarn` works but `yarn` will be used throughout this document.
 
- Once the app is running, you can view it in your browser: `http://localhost:3000/`
+ Once the app is running, you can view it in your browser: [http://localhost:3000/](`http://localhost:3000/`)
 
 ## Developing
 
