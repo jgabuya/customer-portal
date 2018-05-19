@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button, Card, CardBody, CardTitle, Col, Form, FormGroup, Input, Row} from 'reactstrap';
+import {Button, Card, CardBody, CardTitle, Col, Container, Form, FormGroup, Input, Row} from 'reactstrap';
 import {Redirect} from 'react-router-dom';
 
 class Login extends Component {
@@ -26,35 +26,38 @@ class Login extends Component {
         return (
             <div>
                 {this.state.isAuthenticated === true ? (
-                    <Redirect to="/p/dashboard" />
+                    <Redirect to="/p/dashboard"/>
                 ) : (
-                    <Row className="mt-5">
-                        <Col md={{size: 6, offset: 3}}>
-                            <Card>
-                                <CardBody>
-                                    <CardTitle className="text-center">Sign in to Customer Portal</CardTitle>
+                    <Container>
+                        <Row className="mt-5">
+                            <Col md={{size: 6, offset: 3}}>
+                                <Card>
+                                    <CardBody>
+                                        <CardTitle className="text-center">Sign in to Customer Portal</CardTitle>
 
-                                    <hr/>
+                                        <hr/>
 
-                                    <Row className="mt-5 mb-4">
-                                        <Col md={{size: 8, offset: 2}}>
-                                            <Form onSubmit={this.onHandleFormSubmit}>
-                                                <FormGroup>
-                                                    <Input type="username" name="username" id="username" required
-                                                           placeholder="Enter your username"/>
-                                                </FormGroup>
+                                        <Row className="mt-5 mb-4">
+                                            <Col md={{size: 8, offset: 2}}>
+                                                <Form onSubmit={this.onHandleFormSubmit}>
+                                                    <FormGroup>
+                                                        <Input type="username" name="username" id="username" required
+                                                               placeholder="Enter your username"/>
+                                                    </FormGroup>
 
-                                                <FormGroup>
-                                                    <Button block color="success">Sign in</Button>
-                                                </FormGroup>
-                                            </Form>
-                                        </Col>
-                                    </Row>
-                                </CardBody>
-                            </Card>
-                        </Col>
-                    </Row>
-                )}
+                                                    <FormGroup>
+                                                        <Button block color="success">Sign in</Button>
+                                                    </FormGroup>
+                                                </Form>
+                                            </Col>
+                                        </Row>
+                                    </CardBody>
+                                </Card>
+                            </Col>
+                        </Row>
+                    </Container>
+                    )
+                }
             </div>
         )
     }
