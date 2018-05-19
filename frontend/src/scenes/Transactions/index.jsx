@@ -1,9 +1,72 @@
 import React, {Component} from 'react';
+import {Col, Form, FormGroup, Input, Label, Nav, NavItem, NavLink, Row} from 'reactstrap';
+import AccountSelectorForm from "./components/AccountSelectorForm";
+import TransactionsDisplay from "./components/TransactionsDisplay";
 
 class Transactions extends Component {
+    constructor(props) {
+        super(props);
+
+        // initialize state
+        this.state = {
+            accounts: [],
+            transactions: {},
+            selectedAccountId: null
+        };
+
+        this.onHandleAccountChange = this.onHandleAccountChange.bind(this);
+    }
+
+    componentDidMount() {
+        // set accounts data
+        this.setState({
+            accounts: Array.from(Array(13).keys()).map((value, index, array) => {
+                return {
+                    id: 'ff2e0edc-5aac-11e8-9c2d-fa7ae01bbebc',
+                    name: `Account ${index}`,
+                    currency: 'EURO',
+                    balance: Math.round(Math.random() * 10000000)
+                }
+            })
+        }, () => {
+            this.setState({
+                selectedAccountId: this.state.accounts[0].id
+            })
+        });
+    }
+
+    onHandleAccountChange(accountId) {
+        this.state.selectedAccountId = accountId;
+    }
+
+    toggleNav(activeTab) {
+        this.setState({
+            activeTab: activeTab
+        });
+    }
+
     render() {
         return (
-            <h2>Transactions</h2>
+            <div>
+                <Row>
+                    <Col>
+                        <h2>Transactions</h2>
+                        <hr/>
+                    </Col>
+                </Row>
+
+                <Row className="mt-3">
+                    <Col md={3}>
+                        <AccountSelectorForm accounts={this.state.accounts} onHandleChange={this.onHandleAccountChange}/>
+                    </Col>
+                </Row>
+
+                <Row className="mt-3">
+                    <Col>
+                        <TransactionsDisplay transactions={this.state.transactions}/>
+                    </Col>
+                </Row>
+            </div>
         )
     }
 }
