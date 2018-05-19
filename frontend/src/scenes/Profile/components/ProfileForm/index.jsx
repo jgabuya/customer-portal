@@ -10,7 +10,7 @@ class ProfileForm extends Component {
                     <Label for="customerId" md={3}>Customer Id</Label>
 
                     <Col sm={9}>
-                        <Input type="text" name="customerId" id="customerId" value={this.props.customerId} placeholder="Customer Id" disabled />
+                        <Input type="text" name="customerId" id="customerId" value={this.props.id} placeholder="Customer Id" disabled />
                     </Col>
                 </FormGroup>
 
@@ -68,7 +68,7 @@ class ProfileForm extends Component {
 }
 
 ProfileForm.propTypes = {
-    customerId: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
     firstName: PropTypes.string.isRequired,
     lastName: PropTypes.string.isRequired,

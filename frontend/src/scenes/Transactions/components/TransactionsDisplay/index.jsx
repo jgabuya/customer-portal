@@ -44,11 +44,11 @@ class TransactionsDisplay extends Component {
 
                 <TabContent activeTab={this.state.activeTab} className="mt-4">
                     <TabPane tabId="deposit">
-                        <TransactionsTable transactions={this.props.transactions.deposit}/>
+                        <TransactionsTable currency={this.props.currency} transactions={this.props.transactions.deposit}/>
                     </TabPane>
 
                     <TabPane tabId="withdrawal">
-                        <TransactionsTable transactions={this.props.transactions.withdrawal}/>
+                        <TransactionsTable currency={this.props.currency} transactions={this.props.transactions.withdrawal}/>
                     </TabPane>
                 </TabContent>
             </div>
@@ -57,7 +57,8 @@ class TransactionsDisplay extends Component {
 }
 
 TransactionsDisplay.propTypes = {
-    transactions: PropTypes.object.isRequired
+    transactions: PropTypes.object.isRequired,
+    currency: PropTypes.string.isRequired
 };
 
 export default TransactionsDisplay;

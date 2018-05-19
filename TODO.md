@@ -13,5 +13,6 @@
      * [x] API Endpoints
      * [ ] Use Redux for state management
  * [x] Set up Node.js backend
+ * [ ] Define backend routes (backend readme) 
  * [ ] Ensure 100% test coverage 
  * [ ] Licensing (optional)

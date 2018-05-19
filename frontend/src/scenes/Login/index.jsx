@@ -28,7 +28,7 @@ class Login extends Component {
                 {this.state.isAuthenticated === true ? (
                     <Redirect to="/dashboard" />
                 ) : (
-                    <Row className="mb-5">
+                    <Row className="mb-5 mt-5">
                         <Col md={{size: 6, offset: 3}}>
                             <Card>
                                 <CardBody>
@@ -36,7 +36,7 @@ class Login extends Component {
 
                                     <hr/>
 
-                                    <Row className="mt-4">
+                                    <Row className="mt-5 mb-4">
                                         <Col md={{size: 8, offset: 2}}>
                                             <Form onSubmit={this.onHandleFormSubmit}>
                                                 <FormGroup>

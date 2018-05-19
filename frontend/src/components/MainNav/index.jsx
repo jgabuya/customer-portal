@@ -59,7 +59,7 @@ class MainNav extends Component {
                                     <DropdownMenu>
                                         <DropdownItem href="/profile">Profile</DropdownItem>
                                         <DropdownItem divider />
-                                        <DropdownItem href="/logout">Sign Out</DropdownItem>
+                                        <DropdownItem href="/">Sign Out</DropdownItem>
                                     </DropdownMenu>
                                 </UncontrolledDropdown>
                             </Nav>
