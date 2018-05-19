@@ -82,3 +82,10 @@ Run `yarn test` from this repo's root directory.
 > By default, runs tests related to files changed since the last commit.
 
 More info [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#running-tests)
+
+## Future additions
+
+Due to limited time and the nature of this app, some features/functionality have been left out. It would be nice to have them implemented in the future.
+
+* Proper authentication
+* Persistent backend data storage
