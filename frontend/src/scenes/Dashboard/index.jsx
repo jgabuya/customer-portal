@@ -55,7 +55,7 @@ class Dashboard extends Component {
 
                 <Row>
                     <Col>
-                        <h2>Welcome, {this.state.user.firstName} !</h2>
+                        <h2>Welcome, {this.state.user.firstName}!</h2>
                     </Col>
                 </Row>
 
