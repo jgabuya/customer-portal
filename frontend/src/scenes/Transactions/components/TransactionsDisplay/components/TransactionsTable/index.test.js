@@ -7,6 +7,7 @@ it('renders without crashing', () => {
     ReactDOM.render(
         <TransactionsTable
             transactions={[]}
+            currency=""
         />,
         div
     );

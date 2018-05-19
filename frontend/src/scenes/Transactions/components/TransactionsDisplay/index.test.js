@@ -10,6 +10,7 @@ it('renders without crashing', () => {
                 deposit: [],
                 withdrawal: []
             }}
+            currency=""
         />,
         div
     );
