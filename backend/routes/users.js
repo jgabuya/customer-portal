@@ -1,9 +1,17 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const data = require('../data');
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.json({users: [{name: 'Timmy'}]});
+/* GET users */
+router.get('/', function (req, res, next) {
+    res.status(200).json({...data.users[0]});
+});
+
+/* Mock user data update */
+router.post('/', function (req, res, next) {
+    res.status(200).json({
+        success: true
+    });
 });
 
 module.exports = router;
