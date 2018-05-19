@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Col, Form, FormGroup, Input, Label, Nav, NavItem, NavLink, Row} from 'reactstrap';
+import {Col, Row} from 'reactstrap';
 import AccountSelectorForm from "./components/AccountSelectorForm";
 import TransactionsDisplay from "./components/TransactionsDisplay";
 
@@ -37,12 +37,6 @@ class Transactions extends Component {
 
     onHandleAccountChange(accountId) {
         this.state.selectedAccountId = accountId;
-    }
-
-    toggleNav(activeTab) {
-        this.setState({
-            activeTab: activeTab
-        });
     }
 
     render() {
