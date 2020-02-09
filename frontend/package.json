@@ -15,7 +15,7 @@
     "react-helmet": "^5.2.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.1",
-    "react-toastify": "^5.4.1",
+    "react-toastify": "^5.5.0",
     "reactstrap": "^8.1.1"
   },
   "scripts": {
