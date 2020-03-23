@@ -1,5 +1,7 @@
 # Customer Portal
 
+![Node.js CI](https://github.com/jgabuya/customer-portal/workflows/Node.js%20CI/badge.svg)
+
 ## Description
 
 This is a simple customer portal web app that allows the user (customer) to:
