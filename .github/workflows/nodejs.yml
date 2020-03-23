@@ -28,9 +28,9 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: yarn
       working-directory: ${{env.frontend-directory}}
-    - run: yarn test
+    - run: CI=true yarn test
       working-directory: ${{env.frontend-directory}}
-    - run: yarn build
+    - run: CI=true yarn build
       working-directory: ${{env.frontend-directory}}
       env:
         CI: true
