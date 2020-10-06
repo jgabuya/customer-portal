@@ -6944,9 +6944,9 @@ mkdirp@^0.5.5:
   dependencies:
     minimist "^1.2.5"
 
-moment@^2.29.0:
-  version "2.29.0"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.0.tgz#fcbef955844d91deb55438613ddcec56e86a3425"
+moment@^2.29.1:
+  version "2.29.1"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.1.tgz#b2be769fa31940be9eeea6469c075e35006fa3d3"
 
 move-concurrently@^1.0.1:
   version "1.0.1"
