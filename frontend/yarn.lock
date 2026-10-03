@@ -27,6 +27,14 @@
     "@babel/highlight" "^7.22.13"
     chalk "^2.4.2"
 
+"@babel/code-frame@^7.29.7":
+  version "7.29.7"
+  resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.29.7.tgz#f2fbbfea87c44a21590ec515b778b2c26d8866e7"
+  dependencies:
+    "@babel/helper-validator-identifier" "^7.29.7"
+    js-tokens "^4.0.0"
+    picocolors "^1.1.1"
+
 "@babel/compat-data@^7.12.1", "@babel/compat-data@^7.12.5", "@babel/compat-data@^7.12.7":
   version "7.12.7"
   resolved "https://registry.yarnpkg.com/@babel/compat-data/-/compat-data-7.12.7.tgz#9329b4782a7d6bbd7eef57e11addf91ee3ef1e41"
@@ -445,6 +453,10 @@
   version "7.22.5"
   resolved "https://registry.yarnpkg.com/@babel/helper-string-parser/-/helper-string-parser-7.22.5.tgz#533f36457a25814cf1df6488523ad547d784a99f"
 
+"@babel/helper-string-parser@^7.29.7":
+  version "7.29.7"
+  resolved "https://registry.yarnpkg.com/@babel/helper-string-parser/-/helper-string-parser-7.29.7.tgz#7f0871d99824d23137d60f86fcf6130fd5a1b51f"
+
 "@babel/helper-validator-identifier@^7.10.4":
   version "7.10.4"
   resolved "https://registry.yarnpkg.com/@babel/helper-validator-identifier/-/helper-validator-identifier-7.10.4.tgz#a78c7a7251e01f616512d31b10adcf52ada5e0d2"
@@ -456,6 +468,10 @@
 "@babel/helper-validator-identifier@^7.22.20":
   version "7.22.20"
   resolved "https://registry.yarnpkg.com/@babel/helper-validator-identifier/-/helper-validator-identifier-7.22.20.tgz#c4ae002c61d2879e724581d96665583dbc1dc0e0"
+
+"@babel/helper-validator-identifier@^7.29.7":
+  version "7.29.7"
+  resolved "https://registry.yarnpkg.com/@babel/helper-validator-identifier/-/helper-validator-identifier-7.29.7.tgz#bd87084ced0c796ec46bda492de6e83d29e89fc2"
 
 "@babel/helper-validator-option@^7.12.1":
   version "7.12.1"
@@ -484,12 +500,11 @@
     "@babel/types" "^7.12.13"
 
 "@babel/helpers@^7.12.1", "@babel/helpers@^7.12.5":
-  version "7.12.5"
-  resolved "https://registry.yarnpkg.com/@babel/helpers/-/helpers-7.12.5.tgz#1a1ba4a768d9b58310eda516c449913fe647116e"
+  version "7.29.7"
+  resolved "https://registry.yarnpkg.com/@babel/helpers/-/helpers-7.29.7.tgz#45abfde7548997e34376c3e69feb475cffb4a607"
   dependencies:
-    "@babel/template" "^7.10.4"
-    "@babel/traverse" "^7.12.5"
-    "@babel/types" "^7.12.5"
+    "@babel/template" "^7.29.7"
+    "@babel/types" "^7.29.7"
 
 "@babel/highlight@^7.0.0":
   version "7.5.0"
@@ -538,6 +553,12 @@
 "@babel/parser@^7.22.15", "@babel/parser@^7.23.3":
   version "7.23.3"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.23.3.tgz#0ce0be31a4ca4f1884b5786057cadcb6c3be58f9"
+
+"@babel/parser@^7.29.7":
+  version "7.29.9"
+  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.29.9.tgz#e7ee0a24f752c5296c6455855ccb72662e67ea96"
+  dependencies:
+    "@babel/types" "^7.29.8"
 
 "@babel/plugin-proposal-async-generator-functions@^7.12.1":
   version "7.12.1"
@@ -1724,6 +1745,14 @@
     "@babel/parser" "^7.22.15"
     "@babel/types" "^7.22.15"
 
+"@babel/template@^7.29.7":
+  version "7.29.7"
+  resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.29.7.tgz#4d9d4004f645cdd304de958c725162784ecac700"
+  dependencies:
+    "@babel/code-frame" "^7.29.7"
+    "@babel/parser" "^7.29.7"
+    "@babel/types" "^7.29.7"
+
 "@babel/traverse@^7.1.0", "@babel/traverse@^7.10.4", "@babel/traverse@^7.12.1", "@babel/traverse@^7.12.13", "@babel/traverse@^7.12.17", "@babel/traverse@^7.12.5", "@babel/traverse@^7.12.7", "@babel/traverse@^7.7.0":
   version "7.23.3"
   resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.23.3.tgz#26ee5f252e725aa7aca3474aa5b324eaf7908b5b"
@@ -1770,6 +1799,13 @@
     "@babel/helper-string-parser" "^7.22.5"
     "@babel/helper-validator-identifier" "^7.22.20"
     to-fast-properties "^2.0.0"
+
+"@babel/types@^7.29.7", "@babel/types@^7.29.8":
+  version "7.29.8"
+  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.29.8.tgz#1229eef31d85156d70fa3f4cd859376d0eaf6863"
+  dependencies:
+    "@babel/helper-string-parser" "^7.29.7"
+    "@babel/helper-validator-identifier" "^7.29.7"
 
 "@babel/types@^7.8.3":
   version "7.8.3"
@@ -7392,11 +7428,7 @@ lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
 
-"lodash@>=3.5 <5", lodash@^4.15.0, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.5:
-  version "4.17.21"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
-
-lodash@^4.7.0:
+"lodash@>=3.5 <5", lodash@^4.15.0, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.5, lodash@^4.7.0:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
 
@@ -7562,7 +7594,7 @@ mime-db@~1.33.0:
   version "1.33.0"
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.33.0.tgz#a3492050a5cb9b63450541e39d9788d2272783db"
 
-mime-types@^2.1.12:
+mime-types@^2.1.12, mime-types@~2.1.34:
   version "2.1.35"
   resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.35.tgz#381a871b62a734450660ae3deee44813f70d959a"
   dependencies:
@@ -7585,12 +7617,6 @@ mime-types@~2.1.24:
   resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.24.tgz#b6f8d0b3e951efb77dedeca194cff6d16f676f81"
   dependencies:
     mime-db "1.40.0"
-
-mime-types@~2.1.34:
-  version "2.1.35"
-  resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.35.tgz#381a871b62a734450660ae3deee44813f70d959a"
-  dependencies:
-    mime-db "1.52.0"
 
 mime@1.6.0:
   version "1.6.0"
@@ -7749,13 +7775,13 @@ ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
 
-ms@2.1.3:
-  version "2.1.3"
-  resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.3.tgz#574c8138ce1d2b5861f0b44579dbadd60c6615b2"
-
 ms@2.1.2, ms@^2.1.1:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
+
+ms@2.1.3:
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.3.tgz#574c8138ce1d2b5861f0b44579dbadd60c6615b2"
 
 multicast-dns-service-types@^1.1.0:
   version "1.1.0"
@@ -8491,6 +8517,10 @@ pbkdf2@^3.0.3:
 performance-now@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
+
+picocolors@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/picocolors/-/picocolors-1.1.1.tgz#3d321af3eab939b083c8f929a1d12cda81c26b6b"
 
 picomatch@^2.0.4:
   version "2.2.1"
